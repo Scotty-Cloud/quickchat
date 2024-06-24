@@ -12,10 +12,12 @@
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="posts.css" />
 
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
     <title>/POSTS</title>
 
@@ -145,6 +147,37 @@
         </div>
       </div>
 
+      <article class="main-content">
+        <form id="formCreatePost">
+          <div class="create-post" id="formCreatePost">
+            <div class="create-post-input">
+              <img src="../img/main-user.png" />
+              <textarea
+                id="textBoxPost"
+                rows="2"
+                cols="40"
+                placeholder="Write a post"
+              ></textarea>
+            </div>
+            <div class="create-post-links">
+              <li>
+                <i class="fas fa-image" style="color: #6c7cd6"></i>Photo
+              </li>
+              <li>
+                <i class="fas fa-film" style="color: #6c7cd6"></i> Video
+              </li>
+              <li>
+                <i class="fa-solid fa-arrow-trend-up" style="color: #6c7cd6"></i>
+                Trending
+              </li>
+              <li>
+                <button id="btnSubmit" type="submit" class="btn btn-primary">
+                  Post
+                </button>
+              </li>
+            </div>
+          </div>
+        </form>
 
     </main>
 
