@@ -22,22 +22,34 @@
       }
     </script>
   </head>
+
   <body>
     <header>
-      <nav>
-        <a href="#">explore</a>
-        <a href="#">Messages</a>
-        <a href="#">Notifications</a>
-        <a href="#">Find Friends</a>
-        <a href="#">See More</a>
-      </nav>
-    </header>
-
-    <main>
-      <h1>Posts</h1>
-    </main>
-
-    <footer></footer>
+      <section id="page">
+        <nav>
+          <section id="nav-left">
+            <a href="posts.html" id="logo">
+              <img src="../images/logo.png" width="5%" alt="QCLogo" />
+            </a>
+          </section>
+          <section id="nav-right">
+            <section id="search-box">
+              <img src="../images/search.png" alt="" />
+              <input type="text" placeholder="Search" />
+            </section>
+            <section id="user-online" onclick="toggleMenu()">
+              <img src="../images/defaultUser.png" alt="" />
+            </section>
+          </section>
+        </nav>
+      </header>
+      
+      <main>
+        <h1>Posts</h1>
+      </main>
+      
+      <footer></footer>
+    </section>
 
     <!-- Page-specific code -->
     <script src="posts.js"></script>
