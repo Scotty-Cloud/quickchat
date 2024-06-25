@@ -17,9 +17,12 @@
       crossorigin="anonymous"
     ></script> -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
-    <title>/POSTS</title>
+    <title>QuickChat - Thread</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="../account/auth.js"></script>
@@ -31,213 +34,302 @@
   </head>
 
   <body>
-    <header>
-      <section id="page">
-        <nav>
-          <section id="nav-left">
-            <a href="posts.html" id="logo">
-              <img src="../images/logo.png" width="5%" alt="QCLogo" />
-            </a>
-          </section>
-          <section id="nav-right">
-            <section id="search-box">
-              <img src="../images/search.png" alt="" />
-              <input type="text" placeholder="Search" />
-            </section>
-            <section id="user-online" onclick="toggleMenu()">
+    <div class="page">
+      <nav>
+        <!-- Navigation bar left -->
+        <div class="nav-left">
+          <a href="posts.html" class="logo"
+            ><img src="../images/logo.png" alt="" class="logo"
+          /></a>
+
+        </div>
+        <!-- Navigation -->
+        <div class="nav-right">
+          <div class="search-box">
+            <img src="../images/search.png" alt="" />
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+            <img src="../images/defaultUser.png" alt="profile picture" />
+          </div>
+        </div>
+        <!-- Seetings menu -->
+        <div class="settings-menu">
+          <!-- Button for switching colors -->
+          <div id="dark-btn">
+            <span></span>
+          </div>
+
+          <div class="settings-menu-inner">
+            <div class="user-profile">
               <img src="../images/defaultUser.png" alt="" />
-            </section>
-          </section>
-          <section id="menu-settings">
-            <div id="dark-mode-button">
-              <span></span>
+              <div>
+                <p>Godzilla Scotty</p>
+                <a href="../html/profile.html">See your profile</a>
+              </div>
             </div>
-            <section id="menu-settings-user">
-              <div class="user-profile">
-                <img src="../images/defaultUser.png" alt="" />
-                <div>
-                  <h5>Godzilla Scotty</h5>
-                  <a href="../profile/profile.html">View your profile</a>
-                </div>
+            <hr />
+            <div class="user-profile">
+              <i class="fas fa-user-friends" style="color: #6c7cd6"></i>
+              <div>
+                <p>Switch Account</p>
+                <a href="#">Choose a profile</a>
               </div>
-              <hr />
-              <div class="user-profile">
-                <i class="fas fa-user-friends" style="color: #6c7cd6"></i>
-                <div>
-                  <p>Manage Account</p>
-                  <a href="#">Switch Accounts</a>
-                </div>
-              </div>
-              <hr />
-
-              <div class="settings-links">
-                <i class="fas fa-cog setting-icon settings-icon" style="color: #6c7cd6"></i>
-                <a href="#">Settings & Privacy
-                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
-                </a>
-              </div>
-              <div class="settings-links">
-                <i class="fas fa-globe setting-icon settings-icon" style="color: #6c7cd6"></i>
-                <a href="#">Language
-                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
-                </a>
-              </div>
-              <div class="settings-links">
-                <i
-                  class="fas fa-question-circle settings-icon"
-                  style="color: #6c7cd6" ></i>
-                <a href="#">Help & Support
-                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
-               </a>
-              </div>
-              <div class="settings-links">
-                <i class="fas fa-moon settings-icon" style="color: #6c7cd6"></i>
-                <a href="#">Display & Accessability
-                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
-                </a>
-              </div>
-              <div class="settings-links">
-                <i class="fas fa-sign-out-alt settings-icon" style="color: #6c7cd6"></i>
-                <a href="#" id="btnLogOut">Logout
-                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
-                </a>
-              </div>
-            </section>
-          </section>
-        </nav>
-      </section>
-    </header>
-
-    <main class="container">
-       <!-- Left sidebar -->
-       <div class="left-sidebar">
-        <div class="user-links">
-          <!-- List of links on the left side bar -->
-          <a href="#">
-            <i class="fas fa-home" style="color: #6c7cd6"></i>
-            Explore
-          </a>
-          <a href="#">
-            <i class="fas fa-comments" style="color: #6c7cd6"></i>
-            Messages
-          </a>
-          <a href="#">
-            <i class="fas fa-bell" style="color: #6c7cd6"></i>
-            Notification
-          </a>
-          <a href="#">
-            <i class="fas fa-user-plus" style="color: #6c7cd6"></i>
-            Find Friends
-          </a>
-          <a href="#"> see more </a>
-        </div>
-
-        <div class="shortcut-links">
-          <p>
-            <i class="fas fa-users" style="color: #6c7cd6"></i> Group-Chats
-          </p>
-          <a href="#"
-            ><img src="../images/" alt="" /> McKeachie Students</a>
-          <a href="#"
-            ><img src="../images/"" alt="" /> Tech Turtles</a>
-          <a href="#"
-            ><img src="../images/"" alt="" /> LG5</a>
-          <a href="#"
-            ><img src="../images/"" alt="" /> Group Coaching </a>
-        </div>
-      </div>
-
-      <article class="main-content">
-        <form id="formCreatePost">
-          <div class="create-post" id="formCreatePost">
-            <div class="create-post-input">
-              <img src="../img/main-user.png" />
-              <textarea
-                id="textBoxPost"
-                rows="2"
-                cols="40"
-                placeholder="Write a post"
-              ></textarea>
             </div>
-            <div class="create-post-links">
-              <li>
-                <i class="fas fa-image" style="color: #6c7cd6"></i>Photo
-              </li>
-              <li>
-                <i class="fas fa-film" style="color: #6c7cd6"></i> Video
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-trend-up" style="color: #6c7cd6"></i>
-                Trending
-              </li>
-              <li>
-                <button id="btnSubmit" type="submit" class="btn btn-primary">
-                  Post
-                </button>
-              </li>
+            <hr />
+
+            <!-- Seetings links -->
+            <div class="settings-links">
+              <i
+                class="fas fa-cog setting-icon settings-icon"
+                style="color: #6c7cd6"
+              ></i>
+              <a href="#"
+                >Settings & Privacy
+                <i class="fas fa-arrow-right" style="font-size: 10px"></i
+              ></a>
+            </div>
+            <div class="settings-links">
+              <i
+                class="fas fa-globe setting-icon settings-icon"
+                style="color: #6c7cd6"
+              ></i>
+              <a href="#"
+                >Language
+                <i class="fas fa-arrow-right" style="font-size: 10px"></i
+              ></a>
+            </div>
+            <div class="settings-links">
+              <i
+                class="fas fa-question-circle settings-icon"
+                style="color: #6c7cd6"
+              ></i>
+              <a href="#"
+                >Help & Support
+                <i class="fas fa-arrow-right" style="font-size: 10px"></i
+              ></a>
+            </div>
+            <div class="settings-links">
+              <i class="fas fa-moon settings-icon" style="color: #6c7cd6"></i>
+              <a href="#"
+                >Display & Accessability
+                <i class="fas fa-arrow-right" style="font-size: 10px"></i
+              ></a>
+            </div>
+            <div class="settings-links">
+              <i
+                class="fas fa-sign-out-alt settings-icon"
+                style="color: #6c7cd6"
+              ></i>
+              <a href="#" id="btnLogOut"
+                >Logout
+                <i class="fas fa-arrow-right" style="font-size: 10px"></i
+              ></a>
             </div>
           </div>
-        </form>
+        </div>
+      </nav>
 
-        <div>
-          <select id="dropdownSortPosts" class="form-select" placeholder>
-            <option value="new">New</option>
-            <option value="popular">Popular</option>
-            <option value="username">User</option>
-          </select>
+      <div class="container">
+        <!-- Left sidebar -->
+        <div class="left-sidebar">
+          <div class="imp-links">
+            <!-- List of links on the left side bar -->
+            <a href="#">
+              <i class="fas fa-home" style="color: #6c7cd6"></i>
+              Explore
+            </a>
+            <a href="#">
+              <i class="fas fa-comments" style="color: #6c7cd6"></i>
+              Messages
+            </a>
+            <a href="#">
+              <i class="fas fa-bell" style="color: #6c7cd6"></i>
+              Notification
+            </a>
+            <a href="#">
+              <i class="fas fa-user-plus" style="color: #6c7cd6"></i>
+              Find Friends
+            </a>
+            <a href="#"> see more </a>
+          </div>
+
+          <div class="shortcut-links">
+            <p>
+              <i class="fas fa-users" style="color: #6c7cd6"></i> Group-Chats
+            </p>
+            <a href="#"
+              ><img src="../images/cri.png" alt="" /> McKeachie Students</a
+            >
+            <a href="#"><img src="../images/cri.png"" alt="" /> Tech Turtles</a>
+            <a href="#"><img src="../images/cri.png"" alt="" /> LG5</a>
+            <a href="#"
+              ><img src="../images/cri.png"" alt="" /> Group Coaching
+            </a>
+          </div>
         </div>
 
-        <div class="display-container" id="displayPosts"></div>
+        <!-- Main content -->
+        <article class="main-content">
+          <form id="formCreatePost">
+            <div class="create-post" id="formCreatePost">
+              <div class="create-post-input">
+                <img src="../images/defaultUser.png" />
+                <textarea
+                  id="textBoxPost"
+                  rows="2"
+                  cols="40"
+                  placeholder="your text here"
+                ></textarea>
+              </div>
+              <div class="create-post-links">
+                <li>
+                  <i class="fas fa-image" style="color: #6c7cd6"></i>Photo
+                </li>
+                <li>
+                  <i class="fas fa-film" style="color: #6c7cd6"></i> Video
+                </li>
+                <li>
+                  <i class="fas fa-calendar-plus" style="color: #6c7cd6"></i>
+                  Event
+                </li>
+                <li>
+                  <button id="btnSubmit" type="submit" class="btn btn-primary">
+                    Post
+                  </button>
+                </li>
+              </div>
+            </div>
+          </form>
 
-         <!-- Rigt sidebar -->
-         <div class="right-sidebar">
+          <div>
+            <select id="dropdownSortPosts" class="form-select" placeholder>
+              <option value="new">New</option>
+              <option value="popular">Popular</option>
+              <option value="username">User</option>
+            </select>
+          </div>
+
+          <div class="display-container" id="displayPosts"></div>
+        </article>
+
+        <!-- Rigt sidebar -->
+        <div class="right-sidebar">
           <div class="sidebar-title">
-            <h4>Event Reminders</h4>
+            <h4>Trending Dates</h4>
             <a href="#">See All</a>
           </div>
 
           <!-- Event list -->
-          <div class="trending">
-            <div class="left-trend">
+          <div class="event">
+            <div class="left-event">
               <h3>6</h3>
               <span>July</span>
             </div>
-            <div class="right-trend">
-              <h4><i class="fa-solid fa-arrow-trend-up" ></i> Bleach: TYBW Trailer</h4>
-              <p><i class="fas fa-solid fa-film"></i> Anime Expo</p>
-              <a href="https://comicbook.com/anime/news/bleach-thousand-year-blood-war-anime-expo-2024/#:~:text=%22The%20Premiere%20and%20Panel%20will,Bleach%20has%20done%20no%20wrong.">More Info</a>
+            <div class="right-event">
+              <h4>Bleach: TYBW Cour 3 Trailer</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Anime Expo</p>
+              <a
+                href="https://comicbook.com/anime/news/bleach-thousand-year-blood-war-anime-expo-2024/#:~:text=%22The%20Premiere%20and%20Panel%20will,Bleach%20has%20done%20no%20wrong."
+                >More Info</a
+              >
             </div>
           </div>
-          <div class="trending">
-            <div class="left-trend">
+          <div class="event">
+            <div class="left-event">
               <h3>5</h3>
               <span>July</span>
             </div>
-            <div class="right-trend">
-              <h4><i class="fa-solid fa-arrow-trend-up" ></i> Eminem New Album Release</h4>
-              <p><i class="fas fa-solid fa-music"></i> Spotify & Apple Music</p>
-              <a href="https://www.youtube.com/watch?v=5dPXGzyZqI8">More Info</a>
+            <div class="right-event">
+              <h4>Eminem New Album Release</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Spotify & Apple Music</p>
+              <a href="https://www.youtube.com/watch?v=5dPXGzyZqI8"
+                >More Info</a
+              >
             </div>
           </div>
-          <div class="trending">
-            <div class="left-trend">
+          <div class="event">
+            <div class="left-event">
               <h3>29</h3>
               <span>June</span>
             </div>
-            <div class="right-trend">
-              <h4><i class="fa-solid fa-arrow-trend-up" ></i>Demon Slayer</h4>
-              <p><i class="fas ffa-solid fa-tv"></i> Final Episode</p>
+            <div class="right-event">
+              <h4>Demon Slayer Final Episode</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Crunchyroll</p>
               <a href="#">More Info</a>
             </div>
           </div>
 
-    </main>
+          <!-- right sidebar bottom section -->
 
-    <footer></footer>
-    <!-- </section> -->
+          <div class="sidebar-title">
+            <h4>
+              <i class="fas fa-history" style="color: #6c7cd6"></i> Recent
+              Conversation
+            </h4>
+            <a href="#">Hide Chat</a>
+          </div>
+
+          <!-- show recently talked to users -->
+          <div class="online-list">
+            <div class="online">
+              <img src="../images/craig.png" alt="" />
+            </div>
+            <a
+              href="https://www.linkedin.com/in/jonathancarpioarellano/"
+              target="none"
+            >
+              <p>Craig Mckeachie</p>
+            </a>
+          </div>
+          <div class="online-list">
+            <div class="online">
+              <img src="../images/nedret.png" alt="" />
+            </div>
+            <a
+              href="https://www.linkedin.com/in/jennifermariejennings/"
+              target="_blank"
+            >
+              <p>Nedret</p>
+            </a>
+          </div>
+          <div class="online-list">
+            <div class="online">
+              <img src="../images/aung.png" alt="" />
+            </div>
+            <a href="https://www.instagram.com/samwit5t/" target="_blank">
+              <p>A-Young(aung)</p>
+            </a>
+          </div>
+
+          <div class="sidebar-title">
+            <h4>
+              <i class="fas fa-ad" style="color: #6c7cd6"></i> Advertisement: Avatar The Last Airbender WATCH NOW!
+            </h4>
+            <a href="#">Close</a>
+          </div>
+          <img src="../images/appa.gif" alt="appa" class="sidebar-ads" />
+        </div>
+      </div>
+
+      <!-- Scroll to the top button -->
+      <button
+        type="button"
+        class="btnScrollToTop animated"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        ^
+      </button>
+
+      <div class="footer">
+        <p>Copyright 2024 - QuickChat</p>
+      </div>
+    </div>
+
+    <div id="loading"></div>
 
     <!-- Page-specific code -->
+
     <script src="posts.js"></script>
   </body>
 </html>
-
