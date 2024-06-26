@@ -15,6 +15,10 @@
 
     <!-- Link to custom style sheet -->
     <link rel="stylesheet" href="../posts/posts.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="../account/auth.js"></script>
@@ -85,7 +89,7 @@
                     <a href="#">Display & Accessability <i class="fas fa-arrow-right" style="font-size: 10px;"></i></a>
                 </div>
                 <div class="settings-links">
-                    <i class="fas fa-sign-out-alt settings-icon" style="color: #6c7cd6;"></i>
+                    <i class="fas fa-sign-out-alt settings-icon" style="color: #c6ccee;"></i>
                     <a href="#" id="btnLogOut">Logout <i class="fas fa-arrow-right" style="font-size: 10px;"></i></a>
                 </div>
 
@@ -94,8 +98,53 @@
 
         </div>
     </nav>
+ <!-- Profile page -->
+ <div class="popup">
+    <div class="profile-container">
+        <img src="../images/minionrock.png" alt="banner image" class="cover-img">
+        <div class="profile-details">
+            <div class="profile-detail-left">
+                <div class="profile-detail-row">
+                    <img src="../images/defaultUser.png" alt="profile pic" class="profile-detail-image">
+                    <div>
+                        <h3>Godzilla Scotty</h3> <!-- PLace holder-->
+                        <p>900 friends - 90 Close Friends </p>
+                        <img src="placeholder" alt="">
+                        <img src="placeholder" alt="">
+                        <img src="placeholder" alt="">
+                    </div>
+                </div>
+            </div>
 
-   
+            <div class="profile-detail-right">
+                <button type="button"><i class="fas fa-user-friends"></i>Friends</button>
+                <button type="button" id="btnEdit"><i class="fas fa-edit"></i>Edit profile</button>
+                <button type="button" id="btnSave"><i class="fas fa-edit"></i>Save</button>
+                <input type="textarea" id="inputBio">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="profile-info">
+        <div class="info-col">
+            <div class="profile-intro">
+                <h3 class="bioTitle">BIO </h3>
+                <p class="bio-text">
+                </p>
+                <hr>
+                <ul>
+                    <li><i class="fas fa-user"></i>Scotty Boy</li>
+                    <li><i class="fa-solid fa-building"></i>Spotify</li>
+                    <li><i class="fa-solid fa-location-dot"></i>New York, NY</li>
+  
+
+
+                </ul>
+            </div>
+
+
     <script src="profile.js"></script>
     <script src="menubar.js"></script>
    
