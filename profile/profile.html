@@ -142,9 +142,9 @@
                 <h3>Godzilla Scotty</h3>
                 <!-- PLace holder-->
                 <p>900 friends - 90 Close Friends</p>
-                <img src="placeholder" alt="" />
-                <img src="placeholder" alt="" />
-                <img src="placeholder" alt="" />
+                <img src="../images/craig.jpg" alt="" />
+                <img src="../images/nedret.jpg" alt="" />
+                <img src="../images/aung.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -196,7 +196,157 @@
             </div>
           </div>
 
-          
+          <div class="profile-intro">
+            <div class="title-box">
+              <h3>Users you might know</h3>
+              <a href="#">View all</a>
+            </div>
+            <p>#YearUp</p>
+            <div class="friends-box">
+              <!-- chnage the photots later -->
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/craigmckeachie/"
+                  target="_blank"
+                >
+                  <img src="../images/craig.jpg" alt="craig" />
+                  <p>Craig</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/aungaungsk/"
+                  target="_blank"
+                >
+                  <img src="../images/aung.jpg" alt="aung" />
+                  <p>Aung</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/nedret-haque/"
+                  target="_blank"
+                >
+                  <img src="../images/nedret.jpg" alt="nedret" />
+                  <p>Nedret</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/jilboudo16/"
+                  target="_blank"
+                >
+                  <img src="../images/julien.jpg" alt="julien" />
+                  <p>Julien</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/pooja-ghoniya-a8218724a/"
+                  target="_blank"
+                >
+                  <img src="../images/pooja.jpg" alt="pooja" />
+                  <p>Pooja</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/tiffany-obi-a1720818a/"
+                  target="_blank"
+                >
+                  <img src="../images/tiffany.jpg" alt="tiffany" />
+                  <p>Tiffany</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/mohammed-alam-b755b7164/"
+                  target="_blank"
+                >
+                  <img src="../images/moe.jpg" alt="Mohammad" />
+                  <p>Moe</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/tiffanydoris/"
+                  target="_blank"
+                >
+                  <img src="../images/tiffanyd.jpg" alt="placeholder" />
+                  <p>tiffanyD</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/david-stinson/"
+                  target="_blank"
+                >
+                  <img src="../images/david.jpg" alt="placeholder" />
+                  <p>David</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-col">
+          <form id="formCreatePost">
+            <div class="create-post" id="formCreatePost">
+              <div class="create-post-input">
+                <img src="../images/defaultUser.png" />
+                <textarea
+                  id="textBoxPost"
+                  rows="2"
+                  cols="40"
+                  placeholder="Write a post"
+                ></textarea>
+              </div>
+              <div class="create-post-links">
+                <li>
+                  <i class="fas fa-image" style="color: #6c7cd6"></i>Photo
+                </li>
+                <li>
+                  <i class="fas fa-film" style="color: #6c7cd6"></i> Video
+                </li>
+                <li>
+                  <i class="fas fa-calendar-plus" style="color: #6c7cd6"></i>
+                  Event
+                </li>
+                <li>
+                  <button id="btnSubmit" type="submit" class="btn btn-primary">
+                    Post
+                  </button>
+                </li>
+              </div>
+            </div>
+          </form>
+
+          <div>
+            <select id="dropdownSortPosts" class="form-select">
+              <option value="new">New</option>
+              <option value="popular">Popular</option>
+              <option value="username">User</option>
+            </select>
+          </div>
+
+          <div class="display-container" id="recentPost"></div>
+
+          <button
+            type="button"
+            class="btnScrollToTop"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          >
+            ^
+          </button>
+        </div>
+      </div>
+
+      <div class="container" id="recentPost"></div>
+
+      <div class="footer">
+        <p>&copy; 2024 - QuickChat</p>
+      </div>
+    </div>
+
     <script src="profile.js"></script>
     <script src="menubar.js"></script>
   </body>
