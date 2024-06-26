@@ -1,0 +1,32 @@
+<!-- go back and add alt for all the img -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>QuickChat | Profile</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+    <!-- Link to custom style sheet -->
+    <link rel="stylesheet" href="../posts/posts.css">
+
+    <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
+    <script src="../account/auth.js"></script>
+    <script>
+        if (isLoggedIn() === false) window.location.replace("/posts/posts.html");
+    </script>
+</head>
+
+<body>
+
+   
+</body>
+
+</html>

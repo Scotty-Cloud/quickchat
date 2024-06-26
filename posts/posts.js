@@ -59,7 +59,7 @@ btnLogOut.onclick = () => {
 };
 
 // when button is clicked, create a post using value from form
-btnSubmit.onclick = function(event) {
+btnSubmit.onclick = function (event) {
   event.preventDefault();
   createPost(newPost.value);
 };
@@ -77,11 +77,11 @@ function createPost(_content) {
     }),
     redirect: "follow",
   })
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       console.log(data); // test
     })
-    .catch(error => {
+    .catch((error) => {
       console.log(error);
     })
     .finally(() => {
