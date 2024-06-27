@@ -1,0 +1,60 @@
+body {
+    background: #7691b9;
+    background-image: url(../images/wave1.svg);
+    background-size: cover; /* Add this to scale the background image */
+    background-repeat: no-repeat; /* Add this to prevent the background image from repeating */
+    height: 100vh; /* Add this to set the height of the body to the full viewport height */
+    margin: 0; /* Add this to remove any default margin */
+    display: flex; /* Add this to make the body a flex container */
+    justify-content: center; /* Add this to center the form vertically */
+    align-items: center; /* Add this to center the form horizontally */
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    padding: 30px;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect behind the form */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  #register-button {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    background-color: #4c7aaf; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #register-button:hover {
+    background-color: #45a049; /* Darker green */
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+  }

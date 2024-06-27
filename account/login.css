@@ -9,8 +9,9 @@ body {
   justify-content: center; /* Add this to center the form vertically */
   align-items: center; /* Add this to center the form horizontally */
 }
+
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 /* login.css */
