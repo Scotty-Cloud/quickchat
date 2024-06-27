@@ -17,12 +17,9 @@
       crossorigin="anonymous"
     ></script> -->
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
-    <title>QuickChat - Thread</title>
+    <title>/POSTS</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="../account/auth.js"></script>
@@ -78,81 +75,67 @@
             </div>
             <hr />
 
-            <!-- Seetings links -->
-            <div class="settings-links">
-              <i
-                class="fas fa-cog setting-icon settings-icon"
-                style="color: #6c7cd6"
-              ></i>
-              <a href="#"
-                >Settings & Privacy
-                <i class="fas fa-arrow-right" style="font-size: 10px"></i
-              ></a>
-            </div>
-            <div class="settings-links">
-              <i
-                class="fas fa-globe setting-icon settings-icon"
-                style="color: #6c7cd6"
-              ></i>
-              <a href="#"
-                >Language
-                <i class="fas fa-arrow-right" style="font-size: 10px"></i
-              ></a>
-            </div>
-            <div class="settings-links">
-              <i
-                class="fas fa-question-circle settings-icon"
-                style="color: #6c7cd6"
-              ></i>
-              <a href="#"
-                >Help & Support
-                <i class="fas fa-arrow-right" style="font-size: 10px"></i
-              ></a>
-            </div>
-            <div class="settings-links">
-              <i class="fas fa-moon settings-icon" style="color: #6c7cd6"></i>
-              <a href="#"
-                >Display & Accessability
-                <i class="fas fa-arrow-right" style="font-size: 10px"></i
-              ></a>
-            </div>
-            <div class="settings-links">
-              <i
-                class="fas fa-sign-out-alt settings-icon"
-                style="color: #6c7cd6"
-              ></i>
-              <a href="#" id="btnLogOut"
-                >Logout
-                <i class="fas fa-arrow-right" style="font-size: 10px"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </nav>
+              <div class="settings-links">
+                <i class="fas fa-cog setting-icon settings-icon" style="color: #6c7cd6"></i>
+                <a href="#">Settings & Privacy
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                </a>
+              </div>
+              <div class="settings-links">
+                <i class="fas fa-globe setting-icon settings-icon" style="color: #6c7cd6"></i>
+                <a href="#">Language
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                </a>
+              </div>
+              <div class="settings-links">
+                <i
+                  class="fas fa-question-circle settings-icon"
+                  style="color: #6c7cd6" ></i>
+                <a href="#">Help & Support
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+               </a>
+              </div>
+              <div class="settings-links">
+                <i class="fas fa-moon settings-icon" style="color: #6c7cd6"></i>
+                <a href="#">Display & Accessability
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                </a>
+              </div>
+              <div class="settings-links">
+                <i class="fas fa-sign-out-alt settings-icon" style="color: #6c7cd6"></i>
+                <a href="#" id="btnLogOut">Logout
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                </a>
+              </div>
+            </section>
+          </section>
+        </nav>
+      </section>
+    </header>
 
-      <div class="container">
-        <!-- Left sidebar -->
-        <div class="left-sidebar">
-          <div class="imp-links">
-            <!-- List of links on the left side bar -->
-            <a href="#">
-              <i class="fas fa-home" style="color: #6c7cd6"></i>
-              Explore
-            </a>
-            <a href="#">
-              <i class="fas fa-comments" style="color: #6c7cd6"></i>
-              Messages
-            </a>
-            <a href="#">
-              <i class="fas fa-bell" style="color: #6c7cd6"></i>
-              Notification
-            </a>
-            <a href="#">
-              <i class="fas fa-user-plus" style="color: #6c7cd6"></i>
-              Find Friends
-            </a>
-            <a href="#"> see more </a>
-          </div>
+    <main class="container">
+       <!-- Left sidebar -->
+       <div class="left-sidebar">
+        <div class="user-links">
+          <!-- List of links on the left side bar -->
+          <a href="#">
+            <i class="fas fa-home" style="color: #6c7cd6"></i>
+            Explore
+          </a>
+          <a href="#">
+            <i class="fas fa-comments" style="color: #6c7cd6"></i>
+            Messages
+          </a>
+          <a href="#">
+            <i class="fas fa-bell" style="color: #6c7cd6"></i>
+            Notification
+          </a>
+          <a href="#">
+            <i class="fas fa-user-plus" style="color: #6c7cd6"></i>
+            Find Friends
+          </a>
+          <a href="#"> see more </a>
+        </div>
 
           <div class="shortcut-links">
             <p>
@@ -179,52 +162,50 @@
           </div>
         </div>
 
-        <!-- Main content -->
-        <article class="main-content">
-          <form id="formCreatePost">
-            <div class="create-post" id="formCreatePost">
-              <div class="create-post-input">
-                <img src="../images/defaultUser.png" />
-                <textarea
-                  id="textBoxPost"
-                  rows="2"
-                  cols="40"
-                  placeholder="your text here"
-                ></textarea>
-              </div>
-              <div class="create-post-links">
-                <li>
-                  <i class="fas fa-image" style="color: #6c7cd6"></i>Photo
-                </li>
-                <li>
-                  <i class="fas fa-film" style="color: #6c7cd6"></i> Video
-                </li>
-                <li>
-                  <i class="fas fa-calendar-plus" style="color: #6c7cd6"></i>
-                  Event
-                </li>
-                <li>
-                  <button id="btnSubmit" type="submit" class="btn btn-primary">
-                    Post
-                  </button>
-                </li>
-              </div>
+      <article class="main-content">
+        <form id="formCreatePost">
+          <div class="create-post" id="formCreatePost">
+            <div class="create-post-input">
+              <img src="../img/main-user.png" />
+              <textarea
+                id="textBoxPost"
+                rows="2"
+                cols="40"
+                placeholder="Write a post"
+              ></textarea>
             </div>
-          </form>
-
-          <div>
-            <select id="dropdownSortPosts" class="form-select" placeholder>
-              <option value="new">New</option>
-              <option value="popular">Popular</option>
-              <option value="username">User</option>
-            </select>
+            <div class="create-post-links">
+              <li>
+                <i class="fas fa-image" style="color: #6c7cd6"></i>Photo
+              </li>
+              <li>
+                <i class="fas fa-film" style="color: #6c7cd6"></i> Video
+              </li>
+              <li>
+                <i class="fa-solid fa-arrow-trend-up" style="color: #6c7cd6"></i>
+                Trending
+              </li>
+              <li>
+                <button id="btnSubmit" type="submit" class="btn btn-primary">
+                  Post
+                </button>
+              </li>
+            </div>
           </div>
+        </form>
 
-          <div class="display-container" id="displayPosts"></div>
-        </article>
+        <div>
+          <select id="dropdownSortPosts" class="form-select" placeholder>
+            <option value="new">New</option>
+            <option value="popular">Popular</option>
+            <option value="username">User</option>
+          </select>
+        </div>
 
-        <!-- Rigt sidebar -->
-        <div class="right-sidebar">
+        <div class="display-container" id="displayPosts"></div>
+
+         <!-- Rigt sidebar -->
+         <div class="right-sidebar">
           <div class="sidebar-title">
             <h4><i class="fas fa-regular fa-calendar" style="color: #6c7cd6" ></i> Trending Dates</h4>
             <a href="#">See All</a>
@@ -247,26 +228,21 @@
               <h3>6</h3>
               <span>July</span>
             </div>
-            <div class="right-event">
-              <h4>Bleach: TYBW Cour 3 Trailer</h4>
-              <p><i class="fas fa-map-marker-alt"></i> Anime Expo</p>
-              <a
-                href="https://comicbook.com/anime/news/bleach-thousand-year-blood-war-anime-expo-2024/#:~:text=%22The%20Premiere%20and%20Panel%20will,Bleach%20has%20done%20no%20wrong."
-                >More Info</a
-              >
+            <div class="right-trend">
+              <h4><i class="fa-solid fa-arrow-trend-up" ></i> Bleach: TYBW Trailer</h4>
+              <p><i class="fas fa-solid fa-film"></i> Anime Expo</p>
+              <a href="https://comicbook.com/anime/news/bleach-thousand-year-blood-war-anime-expo-2024/#:~:text=%22The%20Premiere%20and%20Panel%20will,Bleach%20has%20done%20no%20wrong.">More Info</a>
             </div>
           </div>
-          <div class="event">
-            <div class="left-event">
+          <div class="trending">
+            <div class="left-trend">
               <h3>5</h3>
               <span>July</span>
             </div>
-            <div class="right-event">
-              <h4>Eminem New Album Release</h4>
-              <p><i class="fas fa-map-marker-alt"></i> Spotify & Apple Music</p>
-              <a href="https://www.youtube.com/watch?v=5dPXGzyZqI8"
-                >More Info</a
-              >
+            <div class="right-trend">
+              <h4><i class="fa-solid fa-arrow-trend-up" ></i> Eminem New Album Release</h4>
+              <p><i class="fas fa-solid fa-music"></i> Spotify & Apple Music</p>
+              <a href="https://www.youtube.com/watch?v=5dPXGzyZqI8">More Info</a>
             </div>
           </div>
 
@@ -299,7 +275,7 @@
     <div id="loading"></div>
 
     <!-- Page-specific code -->
-
     <script src="posts.js"></script>
   </body>
 </html>
+
