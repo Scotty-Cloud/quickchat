@@ -1,6 +1,9 @@
 DS_Store
-log.http
-.jpg
-.png
-.jpeg
-.webp
+*log.http
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
