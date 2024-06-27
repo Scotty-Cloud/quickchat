@@ -1,4 +1,5 @@
 /* Posts Page JavaScript */
+
 "use strict";
 
 // global variables
