@@ -2,30 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="global.css" />
-
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="index.css" />
-
-    <title>Login to the Microblog Network!</title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="register.css">
   </head>
   <body>
-    <header>
-      <nav>
-        
-      </nav>
-    </header>
-
     <main>
-      <h1>Register</h1>
+      <form id="registration-form">
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder="Enter Full Name"
+        />
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="UserName"
+        />
+        <input
+          type="text"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <input
+          type="text"
+          name="passwordConfirmation"
+          id="password-confirmation"
+          placeholder="Password"
+        />
+        <button type="submit" id="register-button">Register</button>
+      </form>
     </main>
-
-    <footer></footer>
-
-   
+    <footer>
+      <p>&copy; 2024 - QuickChat</p>
+    </footer>
+    <script src="register.js"></script>
   </body>
 </html>
