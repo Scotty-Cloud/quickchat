@@ -1,8 +1,5 @@
-/* Posts Page JavaScript */
-
 "use strict";
 
-// global variables
 const btnLogOut = document.querySelector("#btnLogOut");
 const formCreatePost = document.querySelector("#formCreatePost");
 const bearerToken = getLoginData();
@@ -14,7 +11,6 @@ const allBtnLike = document.getElementsByClassName("btnLike");
 const btnSubmit = document.querySelector("#btnSubmit");
 const btnScrollToTop = document.querySelector(".btnScrollToTop");
 
-// when page loads
 window.onload = () => {
   dropdownSortPosts.value = "new";
   onDropdownSort();
@@ -40,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () =>
   })
 );
 
-// Show or hide button that scrolls to the top of page
 window.onscroll = () => {
   scrollFunction();
 };
@@ -53,18 +48,15 @@ const scrollFunction = () => {
   }
 };
 
-// logout button
 btnLogOut.onclick = () => {
   logout();
 };
 
-// when button is clicked, create a post using value from form
 btnSubmit.onclick = function (event) {
   event.preventDefault();
   createPost(newPost.value);
 };
 
-// function for creating a new post
 function createPost(_content) {
   fetch(`${apiBaseURL}/api/posts`, {
     method: "POST",
@@ -89,7 +81,6 @@ function createPost(_content) {
     });
 }
 
-//function to sort posts onchange of dropdown select
 async function onDropdownSort() {
   displayPosts.innerHTML = "";
   let unlikeID = "";
@@ -116,13 +107,13 @@ async function onDropdownSort() {
       );
     }
     newData.forEach((post) => {
-      let newDate = new Date(post.createdAt); // for date formatting
-      // check if own post to display delete button
+      let newDate = new Date(post.createdAt);
+ 
       let isPostOwner = false;
       if (bearerToken.username == post.username) {
         isPostOwner = true;
       }
-      //check if liked or not
+
       let isLiked = false;
       post.likes.forEach((like) => {
         if (like.username == bearerToken.username) {
@@ -130,7 +121,7 @@ async function onDropdownSort() {
           unlikeID = like._id;
         }
       });
-      //call function to display each post
+  
       displayAllPosts(
         post.username,
         newDate.toLocaleString(),
@@ -145,10 +136,7 @@ async function onDropdownSort() {
   } catch (error) {
     console.log(error);
   }
-  console.log(allBtnDelete.length); //remove later
-  console.log(allBtnLike.length); //remove later
 
-  // like a post when clicked
   for (let i = 0; i < allBtnLike.length; i++) {
     allBtnLike[i].onclick = () => {
       if (allBtnLike[i].dataset.value == "Unliked") {
@@ -161,7 +149,7 @@ async function onDropdownSort() {
     };
   }
 
-  // delete post when clicked
+
   for (let i = 0; i < allBtnDelete.length; i++) {
     allBtnDelete[i].onclick = () => {
       let text = "Are you sure you want to DELETE your post?";
@@ -174,14 +162,13 @@ async function onDropdownSort() {
   }
 }
 
-// This is for generatig random number
+
 function getRandomInteger(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function for displaying all posts
 function displayAllPosts(
   _username,
   _date,
@@ -192,14 +179,13 @@ function displayAllPosts(
   _isLiked,
   _unlikeID
 ) {
-  let ownPost = ""; //check if post owner so delete button appears
+  let ownPost = ""; 
   if (_ownPost) {
     ownPost = `<button class="btnDelete" id="${_valueID}"><i class="fas fa-trash trash" style="color: #df4e4e;"></i></button>`;
   } else {
     ownPost = "";
   }
 
-  //check if post is liked or not to display appropriate button
   let isLiked = "";
   if (_isLiked) {
     isLiked = `<div class="post-activity-link btnLike clicked" id="${_unlikeID}" data-value="Liked">
@@ -262,7 +248,7 @@ function displayAllPosts(
       `;
 }
 
-// like post function
+
 async function likePost(_postID) {
   try {
     const response = await fetch(`${apiBaseURL}/api/likes`, {
@@ -285,7 +271,6 @@ async function likePost(_postID) {
   }
 }
 
-// unlike post function
 async function unlikePost(_postID) {
   try {
     const response = await fetch(`${apiBaseURL}/api/likes/${_postID}`, {
@@ -303,7 +288,6 @@ async function unlikePost(_postID) {
   }
 }
 
-// delete post function
 async function deletePost(_postID) {
   try {
     const response = await fetch(`${apiBaseURL}/api/posts/${_postID}`, {
@@ -321,7 +305,6 @@ async function deletePost(_postID) {
   }
 }
 
-// this code is for the side menu to work properly
 const settingsMenu = document.querySelector(".settings-menu");
 const darkBtn = document.getElementById("dark-btn");
 
@@ -340,7 +323,7 @@ darkBtn.onclick = function () {
   }
 };
 
-// local storage
+
 if (localStorage.getItem("theme") == "light") {
   darkBtn.classList.remove("dark-btn-on");
   document.body.classList.remove("dark-theme");
