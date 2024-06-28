@@ -27,17 +27,21 @@
     <main>
       <h1>Login</h1>
       <form id="login">
-        <div>
-          <label for="username">Username</label>
-          <input type="text" id="username" minlength="3" />
-        </div>
-
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" minlength="6" />
-        </div>
-
+        <label for="username">Username</label>
+        <input type="text" 
+        id="username" 
+        minlength="3" 
+        placeholder="Username" 
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          minlength="6"
+          placeholder="Password"
+        />
         <button id="loginButton" type="submit">Login</button>
+        <h4>Dont Have an account? Sign Up <a href="register.html">Here</a></h4>
       </form>
     </main>
 
