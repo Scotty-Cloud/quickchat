@@ -1,47 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 body {
-  background: #7691b9;
+  background: #CDD3F1;
   background-image: url(../images/wave.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
 }
 
 h1 {
-  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 nav {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 0 10px;
   background-color: #4c7aaf;
-  color: white;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
+  color: #fff;
 }
 
 .button:hover {
-  background-color: #7691b9;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.large-button {
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 footer {
-  position: absolute;
+  position: fixed; /* instead of absolute */
   bottom: 0;
+  left: 50%; /* add this to center horizontally */
+  transform: translateX(-50%); /* add this to center horizontally */
   color: #333;
   text-align: center;
   padding: 10px;
+  width: 100%; /* add this to make the footer full-width */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .large-button {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
 }
