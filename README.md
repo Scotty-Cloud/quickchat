@@ -1,7 +1,7 @@
 # Welcome to Quick Chat 💬
 This project uses the MicroblogLite API so users can create posts to share insights about their craft, hobby, or profession. 
 
-[Click Here to visit]() 
+[Click Here to visit](https://quickchatblog.netlify.app/) 
 
 <img src="images/preview1.png">
 <img src="images/preview2.png">
