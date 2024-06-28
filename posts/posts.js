@@ -86,7 +86,7 @@ async function onDropdownSort() {
   let unlikeID = "";
   try {
     const response = await fetch(
-      `${apiBaseURL}/api/posts?limit=50&offset=0`,
+      `${apiBaseURL}/api/posts?limit=100&offset=0`,
       {
         method: "GET",
         headers: {
