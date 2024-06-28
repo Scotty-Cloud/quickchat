@@ -33,7 +33,7 @@ nav {
 }
 
 .button {
-  background-color: #4c7aaf;
+  background-color: rgb(138, 150, 207);
   display: inline-block;
   padding: 15px 30px;
   margin: 10px;
@@ -57,14 +57,14 @@ nav {
 }
 
 footer {
-  position: fixed; /* instead of absolute */
+  position: fixed; 
   bottom: 0;
-  left: 50%; /* add this to center horizontally */
-  transform: translateX(-50%); /* add this to center horizontally */
+  left: 50%; 
+  transform: translateX(-50%); 
   color: #333;
   text-align: center;
   padding: 10px;
-  width: 100%; /* add this to make the footer full-width */
+  width: 100%;
 }
 
 @media (max-width: 768px) {

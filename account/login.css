@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 body {
-  background: #7691b9;
+  background: #CDD3F1;
   background-image: url(../images/wave.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@ input[type="password"] {
   width: 100%;
   padding: 14px 20px;
   margin: 8px 0;
-  background-color: #4c7aaf;
+  background-color: rgb(138, 150, 207);;
   color: white;
   border: none;
   border-radius: 4px;
