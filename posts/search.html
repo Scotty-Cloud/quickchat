@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Chat - Web Search</title>
+    <link rel="stylesheet" href="posts.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      color: #337ab7;
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .gcse-search {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #f7f7f7;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .gcse-search:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-color: #337ab7;
+    }
+    .gcse-search::-webkit-input-placeholder {
+      color: #999;
+    }
+      
+  .dark-theme {
+    background-color: #1E1F22; 
+  }
+  .dark-theme nav {
+    background-color: #6c7cd6; 
+  }
+  .dark-theme .nav-left {
+    background-color: #6c7cd6; 
+  }
+  .dark-theme .nav-right {
+    background-color: #6c7cd6; 
+  }
+  .dark-theme .gcse-search {
+    background-color: #333; 
+    color: #fff; 
+  }
+  .dark-theme .gcse-search::-webkit-input-placeholder {
+    color: #ccc; 
+  }
+  .dark-theme h1 {
+    color: #fff; 
+  }
+  .dark-theme .settings-links {
+    color: #fff; 
+  }
+  .dark-theme .settings-links i {
+    color: #fff; 
+  }
+  </style>
+  <body>
+    <div class="page">
+        <nav>
+          <div class="nav-left">
+            <a href="posts.html" class="logo"
+              ><img src="../images/logo.png" alt="" class="logo"
+            /></a>
+            <p>Quick Chat</p>
+          </div>
+          <div class="nav-right">
+            <div class="search-box">
+              <img src="../images/search.png" alt="" />
+              <input type="text" placeholder="Search" />
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+              <img src="../images/scottlol.jpg" alt="profile picture" />
+            </div>
+          </div>
+          <div class="settings-menu">
+            <div id="dark-btn">
+              <span></span>
+            </div>
+            <div class="settings-menu-inner">
+              <div class="user-profile">
+                <img src="../images/scottlol.jpg" alt="" />
+                <div>
+                  <p>Godzilla Scotty</p>
+                  <a href="../profile/profile.html">See your profile</a>
+                  <br>
+                  <a href="posts.html">See posts</a>
+                </div>
+              </div>
+              <hr />
+              <div class="user-profile">
+                <i class="fas fa-user-friends" style="color: #6c7cd6"></i>
+                <div>
+                  <p>Switch Account</p>
+                  <a href="#">Choose a profile</a>
+                </div>
+              </div>
+              <hr />
+              <div class="settings-links">
+                <i
+                  class="fas fa-cog setting-icon settings-icon"
+                  style="color: #6c7cd6"
+                ></i>
+                <a href="#"
+                  >Settings & Privacy
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i
+                ></a>
+              </div>
+              <div class="settings-links">
+                <i
+                  class="fas fa-globe setting-icon settings-icon"
+                  style="color: #6c7cd6"
+                ></i>
+                <a href="#"
+                  >Language
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i
+                ></a>
+              </div>
+              <div class="settings-links">
+                <i
+                  class="fas fa-question-circle settings-icon"
+                  style="color: #6c7cd6"
+                ></i>
+                <a href="#"
+                  >Help & Support
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i
+                ></a>
+              </div>
+              <div class="settings-links">
+                <i class="fas fa-moon settings-icon" style="color: #6c7cd6"></i>
+                <a href="#"
+                  >Display & Accessability
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i
+                ></a>
+              </div>
+              <div class="settings-links">
+                <i
+                  class="fas fa-sign-out-alt settings-icon"
+                  style="color: #6c7cd6"
+                ></i>
+                <a href="#" id="btnLogOut"
+                  >Logout
+                  <i class="fas fa-arrow-right" style="font-size: 10px"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+    <main>
+      <script
+        async
+        src="https://cse.google.com/cse.js?cx=67b3bf5e99cb14a01"
+      ></script>
+      <div class="gcse-search"></div>
+    </main>
+    <script>
+        const settingsMenu = document.querySelector(".settings-menu");
+        const darkBtn = document.getElementById("dark-btn");
+
+function settingsMenuToggle() {
+  settingsMenu.classList.toggle("settings-menu-height");
+}
+
+darkBtn.onclick = function () {
+  darkBtn.classList.toggle("dark-btn-on");
+  document.body.classList.toggle("dark-theme");
+
+  if (localStorage.getItem("theme") == "light") {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+};
+
+if (localStorage.getItem("theme") == "light") {
+  darkBtn.classList.remove("dark-btn-on");
+  document.body.classList.remove("dark-theme");
+} else if (localStorage.getItem("theme") == "dark") {
+  darkBtn.classList.add("dark-btn-on");
+  document.body.classList.add("dark-theme");
+} else {
+  localStorage.setItem("theme", "light");
+}
+    </script>
+    <script src="../profile/menubar.js"></script>
+    <script src="../profile/profile.js"></script>
+  </body>
+</html>
