@@ -1,7 +1,8 @@
 # Welcome to Quick Chat 💬
-This project uses the MicroblogLite API so users can create posts to share insights about their craft, hobby, or profession. 
 
-[Click Here to visit](https://quickchatblog.netlify.app/) 
+This project uses the MicroblogLite API so users can create posts to share insights about their craft, hobby, or profession.
+
+[Click Here to visit](https://quickchatblog.netlify.app/)
 
 <img src="images/preview1.png">
 <img src="images/preview2.png">
@@ -12,6 +13,7 @@ This project uses the MicroblogLite API so users can create posts to share insig
 <img src="images/preview5.2.png">
 
 # Technologies Used 💻
+
 - HTML
 - CSS
 - JavaScript
@@ -20,4 +22,4 @@ This project uses the MicroblogLite API so users can create posts to share insig
 
 # Credit 📜
 
-Read the [_MicroblogLite_ API docs](http://microbloglite.us-east-2.elasticbeanstalk.com/) 
+Read the [_MicroblogLite_ API docs](http://microbloglite.us-east-2.elasticbeanstalk.com/)
