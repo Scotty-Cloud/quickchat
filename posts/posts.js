@@ -137,31 +137,29 @@ async function onDropdownSort() {
     console.log(error);
   }
 
-  for (let i = 0; i < allBtnLike.length; i++) {
-    allBtnLike[i].onclick = () => {
-      if (allBtnLike[i].dataset.value == "Unliked") {
-        allBtnLike[i].className += " clicked";
-        likePost(allBtnLike[i].id);
-      } else if (allBtnLike[i].dataset.value == "Liked") {
-        allBtnLike[i].classList.remove("clicked");
-        unlikePost(allBtnLike[i].id);
+  for (const btn of allBtnLike) {
+    btn.onclick = () => {
+      if (btn.dataset.value == "Unliked") {
+        btn.className += " clicked";
+        likePost(btn.id);
+      } else if (btn.dataset.value == "Liked") {
+        btn.classList.remove("clicked");
+        unlikePost(btn.id);
       }
     };
   }
 
-
-  for (let i = 0; i < allBtnDelete.length; i++) {
-    allBtnDelete[i].onclick = () => {
+  for (const btn of allBtnDelete) {
+    btn.onclick = () => {
       let text = "Are you sure you want to DELETE your post?";
       if (confirm(text) == true) {
-        deletePost(allBtnDelete[i].id);
+        deletePost(btn.id);
         alert("Post deleted succesfully.");
         location.reload();
       }
     };
   }
 }
-
 
 function getRandomInteger(min, max) {
   min = Math.ceil(min);
