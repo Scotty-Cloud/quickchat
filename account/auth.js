@@ -2,7 +2,8 @@
 
 "use strict";
 
-const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
+// const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
+const apiBaseURL = "https://microbloglite.onrender.com";
 // Backup server:   https://microbloglite.onrender.com
 
 // You can use this function to get the login data of the logged-in
