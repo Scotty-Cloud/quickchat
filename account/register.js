@@ -28,7 +28,7 @@ class RegistrationForm {
       }
   
       try {
-        const response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users", {
+        const response = await fetch("https://microbloglite.onrender.com/api/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
