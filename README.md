@@ -11,6 +11,7 @@ This project uses the MicroblogLite API so users can create posts to share insig
 <img src="images/preview4.2.png">
 <img src="images/preview5.png">
 <img src="images/preview5.2.png">
+<img src="images/preview6.png">
 <img src="images/preview6.2.png">
 
 # Technologies Used 💻
