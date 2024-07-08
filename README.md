@@ -19,7 +19,7 @@ This project uses the MicroblogLite API so users can create posts to share insig
 - HTML
 - CSS
 - JavaScript
-- Postman
+- Postman / REST Client (VSCode extension)
 - Font Awesome CDN
 
 # Credit 📜
